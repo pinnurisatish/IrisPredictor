@@ -1,0 +1,28 @@
+<html>
+<head>
+<title> Flask app</title>
+</head>
+<body>
+
+<div class="login">
+    <h1 style="background-color:#1c87c9;">Iris Species Predictor</h1>
+    
+    <hr />
+    <h3> A Simple Web Application to Predict Species of Iris using Sepal length, Sepal width, Petal length and Petal width</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="sepal_length" placeholder="Sepal Length" required="required" />
+        <input type="text" name="sepal_width" placeholder="Sepal Width" required="required" />
+        <input type="text" name="petal_length" placeholder="Petal Length" required="required" />
+        <input type="text" name="petal_widthth" placeholder="Petal Width" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+    </body>
+</html>
